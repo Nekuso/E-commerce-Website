@@ -117,12 +117,7 @@ a {
     color: var(--secondary-blue);
 }
 
-/* hero section */
-.hero__section {
-    width: 100%;
-    height: 4rem;
-    background-image: url("assets/heroImg");
-}
+
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px){
@@ -158,5 +153,6 @@ a {
         margin-left: auto;
         margin-right: auto;
     }
+
 
 }
