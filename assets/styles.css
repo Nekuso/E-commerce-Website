@@ -13,14 +13,14 @@
     --primary-black: #050505;
     --white-color: #FAFAFF;
     --secondary-blue: #376C93;
-
+    
     /* Margins */
     --mb-1: 0.5rem;
     --mb-2: 1rem;
     --mb-3: 1.5rem;
     --mb-4: 2rem;
-
-
+    
+    
 }
 *{
     box-sizing: border-box;
@@ -47,17 +47,20 @@ a {
     grid-template-columns: 100%;
     grid-column-gap: 2rem;
     width: calc(100% - 3rem);
+    margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
 }
 
 section {
     max-width: 1024px;
-    margin: 2.5rem auto;
+    margin: 4rem auto;
 }
 
 .l-header {
-    background-color: aliceblue;
+    border-radius: 1rem;
+    background: #fdfdfda2;
+    height: var(--header-height);
     width: 100%;
     position:fixed;
     top: 0;
@@ -66,7 +69,6 @@ section {
 }
 
 .nav {
-    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,14 +81,15 @@ section {
 
 @media screen and (max-width: 768px) {
     .nav__menu {
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+        background-color: #fdfdfda2;
         position: fixed;
         top: var(--header-height);
         right: -100%;
         width: 80%;
         height: 100%;
         padding: 2rem;
-        background-color: #fdfdfda2;
-        backdrop-filter: blur(10px);
         transition: .5s;
     }
 }
@@ -224,18 +227,21 @@ section {
 }
 
 .product__img img{
+    transition: .4s;
     max-width: 100%;
 }
 
 .product__card:hover {
     border: 1px solid black;
     border-radius: 10px;
-    transition: .4s
+    transition: .4s;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
 }
 
 .product__card:hover img{
     transition: .4s;
-    transform: rotate(-10deg);
+    transform: rotate(-15deg);
 }
 
 .product__card:hover .product__details h3 {
@@ -249,14 +255,14 @@ section {
     grid-template-columns: 50% 50%;
     align-items: center;
     border-radius: 1rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(2, 2, 2, 0.5)), url(/assets/heroImg.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(2, 2, 2, 0.5)), url(/assets/voucherImg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 70%; background-position-y: center;
-    margin-top: 5rem;
     height: 13rem;
     color: white;
     font-size: .7rem;
+    transition: .4s;
 }
 
 .voucher__content {
@@ -267,11 +273,15 @@ section {
     display: inline-block;
     margin-top: .7rem;
     border-radius: 1rem;
-    
+}
+
+.voucher__section:hover {
+    transition: .4s;
+    transform: scale(1.01);
 }
 
 .get__btn {
-    padding: 1rem;
+    padding: 1rem 2rem;
     border: 1px solid white;
     background-color: white;
     color: black;
@@ -279,11 +289,54 @@ section {
     transition: .4s;
 }
 
+.get__btn:hover {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    
+}
+
+.about__section {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 50% 50%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.about__section img {
+    transform: translateX(20px);
+    width: 100%;
+}
+
+.about__message p {
+    font-size: 1.8vw;
+}
+
+.about__message {
+    padding: 20px;
+    transform: translateX(-40px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    margin: 1rem;
+    transition: .4s;
+}
+
+.about__message:hover {
+    transform: translateX(-70px);
+}
 
 /* MEDIA QUERIES */
 
 
 @media screen and (min-width: 768px){
+    .l-header{
+        padding-bottom: 5rem;
+    }
+    
     body {
         margin: 0;
     }
@@ -325,12 +378,26 @@ section {
     .voucher__content{
         margin-left: 4rem;
     }
+    
+    .about__message p {
+        font-size: 2vw;
+    }
+
 }
 
 @media screen and (min-width: 1024px){
+    
+    .l-header{
+        padding-bottom: 5rem;
+    }
+    
     .bd-grid{
         margin-left: auto;
         margin-right: auto;
+    }
+    
+    .l-header {
+        backdrop-filter: blur(10px);
     }
     
     section {
@@ -347,6 +414,10 @@ section {
     
     .voucher__content{
         margin-left: 3rem;
+    }
+
+    .about__message p {
+        font-size: 1.3vw;
     }
 }
 
