@@ -368,8 +368,14 @@ footer {
 .linksIcons {
     font-size: 1.2rem;
 }
-.linksIcons i{
+.linksIcons a{
+    transition: .4s ease-in-out;
+    color: #FAFAFF;
     margin: .4rem .4rem .4rem 0;
+}
+
+.linksIcons a:hover {
+    color: #376C93;
 }
 
 .allRights{
