@@ -58,7 +58,6 @@ section {
 }
 
 .l-header {
-    border-radius: 1rem;
     background: #fdfdfda2;
     height: var(--header-height);
     width: 100%;
@@ -81,7 +80,6 @@ section {
 
 @media screen and (max-width: 768px) {
     .nav__menu {
-        border-radius: 1rem;
         backdrop-filter: blur(10px);
         background-color: #fdfdfda2;
         position: fixed;
@@ -329,6 +327,59 @@ section {
     transform: translateX(-70px);
 }
 
+footer {
+    background: black;
+    padding: 2rem;
+    color: white;
+}
+
+.footerDivider {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem auto;
+}
+
+.brandInfo{
+    font-size: .6rem;
+    margin: 0 1rem;
+}
+
+.footerDivider h1{
+    font-size: 2.1rem;
+    margin: .5rem auto;
+}
+
+.quickLinks{
+    margin: 0 1rem;
+}
+.quickLinks a{
+    color: white;
+    font-size: .7rem;
+}
+
+.quickLinks ul{
+    padding: 0;
+}
+
+.quickLinks li{
+    margin: .5rem 0;
+}
+
+.linksIcons {
+    font-size: 1.2rem;
+}
+.linksIcons i{
+    margin: .4rem .4rem .4rem 0;
+}
+
+.allRights{
+    font-size: .8rem;
+}
+
+.allRightsSection{
+    margin: 0 auto;
+}
+
 /* MEDIA QUERIES */
 
 
@@ -417,8 +468,14 @@ section {
     }
 
     .about__message p {
-        font-size: 1.3vw;
+        font-size: 1.3rem;
     }
 }
 
- 
+@media screen and (min-width: 425px){
+
+    .linksIcons i{
+        font-size: 1rem;
+        margin: 0;
+    }
+ }
