@@ -121,6 +121,10 @@ section {
     cursor: pointer;
 }
 
+#home {
+    padding: .5rem 0;
+}
+
 /* showMenu */
 .show {
     right: 0;
@@ -138,7 +142,6 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 70%; background-position-y: center;
-    margin-top: 5rem;
     height: 25rem;
     color: white;
 }
