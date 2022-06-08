@@ -261,7 +261,7 @@ section {
     grid-template-columns: 50% 50%;
     align-items: center;
     border-radius: 1rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(2, 2, 2, 0.5)), url(../assets/voucherImg.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(2, 2, 2, 0.5)), url(/assets/voucherImg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 70%; background-position-y: center;
