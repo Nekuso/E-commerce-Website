@@ -5,4 +5,5 @@
 - Smooth scrolling in each section.
 - Developed first with the Mobile First methodology, then for desktop.
 
+
 ![preview img](/preview.png)
